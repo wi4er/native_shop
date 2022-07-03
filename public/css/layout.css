@@ -1,0 +1,59 @@
+.layout {
+  display: block;
+
+  background-color: var(--main-color);
+}
+
+.layout_title {
+  display: flex;
+  align-items: center;
+
+  padding: 12px 15px;
+}
+
+.layout_name {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  flex: 1;
+  color: var(--white-color);
+}
+
+.layout_icons {
+  flex: 1;
+
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.layout_search {
+  padding: 11px 20px 16px;
+}
+
+.layout_input {
+  display: flex;
+  gap: 22px;
+  background-color: white;
+  border-radius: 23px;
+  height: 46px;
+
+  align-items: center;
+  padding: 0 23px;
+}
+
+.layout_input_text {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.layout_input_text::placeholder {
+  opacity: 0.2;
+  color: #4F4F4F;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  padding-left: 1px;
+}
