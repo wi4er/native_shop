@@ -12,9 +12,10 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
 
-    <link rel="preload" href="/font/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/font/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/font/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/font/Montserrat-Bold.woff" as="font" type="font/woff">
+    <link rel="preload" href="/font/Montserrat-SemiBold.woff" as="font" type="font/woff">
+    <link rel="preload" href="/font/Montserrat-Medium.woff" as="font" type="font/woff">
+    <link rel="preload" href="/font/Montserrat-Regular.woff" as="font" type="font/woff">
 
     <link rel="manifest" href="/site.webmanifest">
     <link rel="apple-touch-icon" href="/icon.png">
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/catalog.css">
 
     <meta name="theme-color" content="#fafafa">
 </head>
@@ -49,7 +51,7 @@
             </div>
         </div>
 
-        <div class="layout_search">
+        <div class="layout_search" data-search>
             <div class="layout_input">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -64,14 +66,13 @@
         </div>
     </common-layout>
 </header>
-<div>
-    <a href="/">
-        TO ROOT
-    </a>
-</div>
 
-{% block body %} {% endblock %}
+<main style="padding-top: 126px">
+    {% block body %} {% endblock %}
+</main>
 
+<script async src="/js/vendor/modernizr-3.11.2.min.js"></script>
+<script async src="/js/plugins.js"></script>
 <script async src="/js/main.js"></script>
 <script async src="/js/layout.js"></script>
 </body>

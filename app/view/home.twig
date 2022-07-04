@@ -5,6 +5,22 @@
         SLIDER
     </div>
 
+    <div class="section_pale">
+    {% for item in section %}
+        <div
+            class="section_pale_item"
+            style="background-image: url('{{ item.preview  }}')"
+        >
+            <a
+                href={{ "/catalog/123/" }}
+                class="section_pale_text"
+            >
+                {{ item.name }}
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+
     <div>
         <a href="/catalog/1/">
             TO SECTION 1
@@ -19,12 +35,9 @@
             TO SECTION 4
         </a>
     </div>
-    <div>
-        {{ data }}
-    </div>
 
     <div>
-        HOME 33333
+        {{ data }}
     </div>
 {% endblock %}
 

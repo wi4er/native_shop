@@ -2,16 +2,24 @@
 class CommonLayout extends HTMLElement {
   constructor() {
     super();
-    console.log("CREATE");
-    console.log(arguments);
+
+    this.onScroll = this.onScroll.bind(this);
+
+    this.search = this.querySelector("[data-search]");
+  }
+
+  onScroll() {
+    console.log("SCROLL");
 
   }
+
   connectedCallback() {
-    console.log("CONNECT");
-    console.log(this);
+    console.log(this.search);
 
+    window.onscroll = this.onScroll;
+  }
 
-
+  disconnectedCallback() {
 
   }
 }

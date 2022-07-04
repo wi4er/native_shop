@@ -15,12 +15,12 @@ services:
 
   product:
     image: wi4er/groot:0.13.2
-    container_name: product_api
+    container_name: native_product_api
     environment:
       DB_HOST: mongo
-      DB_USER: content
+      DB_USER: product
       DB_PASSWORD: example
-      DB_NAME: content
+      DB_NAME: product
       CACHE_HOST: cache
     links:
       - mongo

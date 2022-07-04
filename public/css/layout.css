@@ -1,5 +1,9 @@
 .layout {
   display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
   background-color: var(--main-color);
 }
@@ -47,11 +51,15 @@
   flex: 1;
   border: none;
   outline: none;
+  color: var(--black-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .layout_input_text::placeholder {
   opacity: 0.2;
-  color: #4F4F4F;
+  color: var(--black-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;

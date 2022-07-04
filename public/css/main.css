@@ -5,7 +5,9 @@
 
 :root {
   --main-color: #33907C;
+
   --white-color: #FFFFFF;
+  --black-color: #4F4F4F;
 }
 
 @font-face {

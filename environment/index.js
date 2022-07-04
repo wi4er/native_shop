@@ -12,6 +12,10 @@ class Environment {
     get PRODUCT_PORT() {
         return process.env.PRODUCT_PORT || 8081;
     }
+
+    get ACCESS_TOKEN() {
+        return process.env.PRODUCT_PORT || "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRtaW4iOnRydWUsImlhdCI6MTY1Mzg3NDAxM30.PDa_NPahbV8-xPlb4djOuQLr-xpMBvs8-LXiV-bzdZU";
+    }
 }
 
 module.exports = new Environment();
