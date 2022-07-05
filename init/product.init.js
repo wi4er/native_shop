@@ -37,6 +37,21 @@ product.runCommand(
 
 product.runCommand(
     {
+        insert: "flags",
+        documents: [{
+            _id: "novelty",
+            timestamp: new Date(),
+            created: new Date(),
+        }, {
+            _id: "popular",
+            timestamp: new Date(),
+            created: new Date(),
+        }]
+    }
+);
+
+product.runCommand(
+    {
         insert: "images",
         documents: [{
             _id: "preview",
@@ -50,7 +65,7 @@ product.runCommand(
     {
         insert: "sections",
         documents: [{
-            _id: new ObjectId(),
+            _id: new ObjectId("000000000000000000000001"),
             timestamp: new Date(),
             created: new Date(),
             property: {
@@ -66,7 +81,7 @@ product.runCommand(
                 preview: [{url: "/img/catalog/beverages.png"}]
             }
         }, {
-            _id: new ObjectId(),
+            _id: new ObjectId("000000000000000000000002"),
             timestamp: new Date(),
             created: new Date(),
             property: {
@@ -82,7 +97,7 @@ product.runCommand(
                 preview: [{url: "/img/catalog/beverages.png"}]
             }
         }, {
-            _id: new ObjectId(),
+            _id: new ObjectId("000000000000000000000003"),
             timestamp: new Date(),
             created: new Date(),
             property: {
@@ -98,7 +113,7 @@ product.runCommand(
                 preview: [{url: "/img/catalog/beverages.png"}]
             }
         }, {
-            _id: new ObjectId(),
+            _id: new ObjectId("000000000000000000000004"),
             timestamp: new Date(),
             created: new Date(),
             property: {
@@ -114,7 +129,7 @@ product.runCommand(
                 preview: [{url: "/img/catalog/beverages.png"}]
             }
         }, {
-            _id: new ObjectId(),
+            _id: new ObjectId("000000000000000000000005"),
             timestamp: new Date(),
             created: new Date(),
             property: {
@@ -130,7 +145,7 @@ product.runCommand(
                 preview: [{url: "/img/catalog/beverages.png"}]
             }
         }, {
-            _id: new ObjectId(),
+            _id: new ObjectId("000000000000000000000006"),
             timestamp: new Date(),
             created: new Date(),
             property: {
@@ -146,7 +161,7 @@ product.runCommand(
                 preview: [{url: "/img/catalog/beverages.png"}]
             }
         }, {
-            _id: new ObjectId(),
+            _id: new ObjectId("000000000000000000000007"),
             timestamp: new Date(),
             created: new Date(),
             property: {
@@ -162,7 +177,7 @@ product.runCommand(
                 preview: [{url: "/img/catalog/beverages.png"}]
             }
         }, {
-            _id: new ObjectId(),
+            _id: new ObjectId("000000000000000000000008"),
             timestamp: new Date(),
             created: new Date(),
             property: {
@@ -180,3 +195,119 @@ product.runCommand(
         }]
     }
 );
+
+product.runCommand(
+    {
+        insert: "contents",
+        documents: [{
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000001")],
+            property: {
+                DEF: {
+                    name: "Coca cola"
+                }
+            },
+            flag: ["popular"],
+            uniq: [{
+                uniq: "slug",
+                value: "coca_cola"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/beverages.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000003")],
+            property: {
+                DEF: {
+                    name: "Brocolli"
+                }
+            },
+            flag: ["popular", "novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "brocolli"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/beverages.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000001")],
+            property: {
+                DEF: {
+                    name: "Sprite"
+                }
+            },
+            flag: ["popular"],
+            uniq: [{
+                uniq: "slug",
+                value: "sprite"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/beverages.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000001")],
+            property: {
+                DEF: {
+                    name: "Fanta"
+                }
+            },
+            flag: ["novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "fanta"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/beverages.png"}]
+            }
+
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000003")],
+            property: {
+                DEF: {
+                    name: "Cabbage"
+                }
+            },
+            flag: ["novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "cabbage"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/beverages.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000002")],
+            property: {
+                DEF: {
+                    name: "Bun"
+                }
+            },
+            flag: ["novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "bun"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/beverages.png"}]
+            }
+        }]
+    }
+)

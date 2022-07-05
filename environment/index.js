@@ -6,11 +6,11 @@ class Environment {
     }
 
     get PRODUCT_HOST() {
-        return process.env.PRODUCT_HOST || "localhost";
+        return process.env.PRODUCT_HOST || "localhost:8081";
     }
 
-    get PRODUCT_PORT() {
-        return process.env.PRODUCT_PORT || 8081;
+    get BANNER_HOST() {
+        return process.env.PRODUCT_HOST || "localhost:8082";
     }
 
     get ACCESS_TOKEN() {

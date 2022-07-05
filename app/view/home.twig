@@ -3,35 +3,20 @@
 {%  block body %}
     <div class="slider">
         <div class="slider_list">
-            <div class="slider_item">
+        {% for item in banner %}
+            <a
+                href="{{ item.link }}" class="slider_item"
+                style="background-image: url('{{ item. }}')"
+            >
                 <div class="slider_item_title">
-                    Ready to deliver to your home
+                    {{ item.name }}
                 </div>
 
                 <div class="slider_item_button flex_center">
-                    Start Shopping
+                    {{ item.button }}
                 </div>
-            </div>
-
-            <div class="slider_item">
-                <div class="slider_item_title">
-                    Ready to deliver to your home
-                </div>
-
-                <div class="slider_item_button flex_center">
-                    Start Shopping
-                </div>
-            </div>
-
-            <div class="slider_item">
-                <div class="slider_item_title">
-                    Ready to deliver to your home
-                </div>
-
-                <div class="slider_item_button flex_center">
-                    Start Shopping
-                </div>
-            </div>
+            </a>
+        {% endfor %}
         </div>
     </div>
 
