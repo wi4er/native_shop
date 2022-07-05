@@ -1,8 +1,38 @@
 {% extends "layout/common.twig" %}
 
 {%  block body %}
-    <div>
-        SLIDER
+    <div class="slider">
+        <div class="slider_list">
+            <div class="slider_item">
+                <div class="slider_item_title">
+                    Ready to deliver to your home
+                </div>
+
+                <div class="slider_item_button flex_center">
+                    Start Shopping
+                </div>
+            </div>
+
+            <div class="slider_item">
+                <div class="slider_item_title">
+                    Ready to deliver to your home
+                </div>
+
+                <div class="slider_item_button flex_center">
+                    Start Shopping
+                </div>
+            </div>
+
+            <div class="slider_item">
+                <div class="slider_item_title">
+                    Ready to deliver to your home
+                </div>
+
+                <div class="slider_item_button flex_center">
+                    Start Shopping
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="section_pale">
@@ -12,7 +42,7 @@
             style="background-image: url('{{ item.preview  }}')"
         >
             <a
-                href={{ "/catalog/123/" }}
+                href="/catalog/{{ item.slug }}/"
                 class="section_pale_text"
             >
                 {{ item.name }}

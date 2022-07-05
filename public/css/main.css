@@ -10,6 +10,13 @@
   --black-color: #4F4F4F;
 }
 
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @font-face {
   font-family: 'Montserrat';
   src: url('/font/Montserrat-Light.eot');

@@ -9,8 +9,8 @@
 .section_pale_item {
   position: relative;
 
-  background-size: 100% 100%;
-  background-position: 0 0;
+  background-size: 100%;
+  background-position: 0;
 
   height: 0;
   padding-bottom: 100%;
@@ -34,4 +34,62 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+
+.slider {
+  padding: 16px 20px;
+  overflow: scroll;
+}
+
+.slider_list {
+  display: flex;
+  gap: 14px;
+}
+
+.slider_item {
+  position: relative;
+  flex: 0 0 302px;
+  height: 165px;
+  border-radius: 8px;
+
+
+  /*background-size: cover;*/
+  /*background-position: center;*/
+
+  background-image: url("/img/catalog/banner.png");
+
+  background-color: red;
+}
+
+.slider_item_title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+
+  position: absolute;
+  bottom: 82px;
+  left: 17px;
+
+  color: var(--white-color);
+  letter-spacing: 1.2208px;
+  text-transform: uppercase;
+}
+
+.slider_item_button {
+  position: absolute;
+  bottom: 37px;
+  left: 12px;
+
+  width: 147px;
+  height: 28px;
+
+  border: 1px solid var(--white-color);
+  border-radius: 14px;
+  color: var(--white-color);
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 0.727273px;
 }
