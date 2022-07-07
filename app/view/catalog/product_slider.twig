@@ -1,0 +1,17 @@
+<div class="product_bar">
+    <div class="product_bar_head">
+        <div class="product_bar_title">
+            {{ title }}
+        </div>
+
+        <a class="common_button" href="/">
+            See All
+        </a>
+    </div>
+
+    <div class="product_bar_list">
+        {% for item in list %}
+            {% include "catalog/product_card.twig" with item %}
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,17 @@
+
+<div class="product_card">
+    <picture class="product_card_image">
+        <img src="{{ preview }}" />
+    </picture>
+
+    <div class="product_card_data">
+        <div class="product_card_name">
+            {{ name }}
+        </div>
+
+        {%
+            include "catalog/product_price.twig" with
+            {"id": _id, 'price': 35, 'discount': 10}
+        %}
+    </div>
+</div>

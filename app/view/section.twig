@@ -1,13 +1,10 @@
 {% extends "layout/common.twig" %}
 
 {% block body %}
-    <div>
-        SECTION {{ slug }}
-    </div>
 
-    <div>
-        <a href="/product/333">
-            TO PRODUCT 333
-        </a>
+    <div class="section_list">
+    {% for item in list %}
+        {% include "catalog/product_card.twig" with item %}
+    {% endfor %}
     </div>
 {%  endblock %}

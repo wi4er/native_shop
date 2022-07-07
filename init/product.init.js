@@ -31,6 +31,14 @@ product.runCommand(
             _id: "name",
             timestamp: new Date(),
             created: new Date(),
+        }, {
+            _id: "price",
+            timestamp: new Date(),
+            created: new Date(),
+        }, {
+            _id: "discount",
+            timestamp: new Date(),
+            created: new Date(),
         }]
     }
 );
@@ -70,7 +78,7 @@ product.runCommand(
             created: new Date(),
             property: {
                 DEF: {
-                    name: "Beverages"
+                    name: "Beverages",
                 }
             },
             uniq: [{
@@ -206,7 +214,9 @@ product.runCommand(
             section: [new ObjectId("000000000000000000000001")],
             property: {
                 DEF: {
-                    name: "Coca cola"
+                    name: "Coca Cola",
+                    price: 35,
+                    discount: 10,
                 }
             },
             flag: ["popular"],
@@ -224,7 +234,8 @@ product.runCommand(
             section: [new ObjectId("000000000000000000000003")],
             property: {
                 DEF: {
-                    name: "Brocolli"
+                    name: "Brocolli",
+                    price: 15,
                 }
             },
             flag: ["popular", "novelty"],
@@ -242,7 +253,8 @@ product.runCommand(
             section: [new ObjectId("000000000000000000000001")],
             property: {
                 DEF: {
-                    name: "Sprite"
+                    name: "Sprite",
+                    price: 12,
                 }
             },
             flag: ["popular"],
@@ -252,6 +264,61 @@ product.runCommand(
             }],
             image: {
                 preview: [{url: "/img/catalog/beverages.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000001")],
+            property: {
+                DEF: {
+                    name: "Lemonade",
+                    price: 22,
+                }
+            },
+            flag: [],
+            uniq: [{
+                uniq: "slug",
+                value: "lemonade"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/lemonade.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000001")],
+            property: {
+                DEF: {
+                    name: "Whisky"
+                }
+            },
+            flag: ["novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "whisky"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/whisky.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000001")],
+            property: {
+                DEF: {
+                    name: "Fruit punch"
+                }
+            },
+            flag: ["novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "fruit_punch"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/fruit_punch.png"}]
             }
         }, {
             _id: new ObjectId(),

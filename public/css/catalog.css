@@ -1,4 +1,4 @@
-.section_pale {
+.section_tile {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
@@ -6,7 +6,7 @@
   grid-gap: 1px;
 }
 
-.section_pale_item {
+.section_tile_item {
   position: relative;
 
   background-size: 100%;
@@ -16,7 +16,7 @@
   padding-bottom: 100%;
 }
 
-.section_pale_text {
+.section_tile_text {
   text-decoration: none;
   color: var(--white-color);
   width: 100%;
@@ -92,4 +92,123 @@
   font-size: 12px;
   line-height: 21px;
   letter-spacing: 0.727273px;
+}
+
+.product_bar {
+
+  padding: 12px 0 12px 16px;
+}
+
+.product_bar_head {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+}
+
+.product_bar_title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--black-color);
+}
+
+.product_bar_list {
+  display: flex;
+  gap: 10px;
+
+  padding-top: 16px;
+  overflow: scroll;
+}
+
+/**********************/
+
+.product_card {
+  flex: 0 0 160px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid rgba(79, 79, 79, 0.15);
+  background-color: var(--white-color);
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product_card_image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex: 1;
+  overflow: hidden;
+}
+
+.product_card_image  img {
+  width: 100%;
+  flex: 1;
+}
+
+.product_card_data {
+  flex: 0 0 69px;
+  overflow: hidden;
+  padding: 11px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product_card_name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.product_price_discount {
+  text-decoration-line: line-through;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--black-color);
+}
+
+.product_price_value {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--main-color);
+}
+
+/**********************/
+.product_price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_price_buy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.product_price_button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--black-color);
+  opacity: 0.5;
+}
+
+.product_price_list {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.section_list {
+  display: grid;
+  grid-template-columns: 160px 160px;
+  grid-gap: 10px;
+  justify-content: center;
+  padding: 30px 10px;
 }

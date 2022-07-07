@@ -5,8 +5,9 @@
         <div class="slider_list">
         {% for item in banner %}
             <a
-                href="{{ item.link }}" class="slider_item"
-                style="background-image: url('{{ item. }}')"
+                href="{{ item.link }}"
+                class="slider_item"
+                style="background-image: url('{{ item.preview }}')"
             >
                 <div class="slider_item_title">
                     {{ item.name }}
@@ -20,15 +21,15 @@
         </div>
     </div>
 
-    <div class="section_pale">
+    <div class="section_tile">
     {% for item in section %}
         <div
-            class="section_pale_item"
+            class="section_tile_item"
             style="background-image: url('{{ item.preview  }}')"
         >
             <a
                 href="/catalog/{{ item.slug }}/"
-                class="section_pale_text"
+                class="section_tile_text"
             >
                 {{ item.name }}
             </a>
@@ -36,24 +37,8 @@
     {% endfor %}
     </div>
 
-    <div>
-        <a href="/catalog/1/">
-            TO SECTION 1
-        </a>
-        <a href="/catalog/2/">
-            TO SECTION 2
-        </a>
-        <a href="/catalog/3/">
-            TO SECTION 3
-        </a>
-        <a href="/catalog/4/">
-            TO SECTION 4
-        </a>
-    </div>
-
-    <div>
-        {{ data }}
-    </div>
+    {% include "catalog/product_slider.twig" with {'title': 'New Product', 'list': novelty} %}
+    {% include "catalog/product_slider.twig" with {'title': 'Popular Product', 'list': popular} %}
 {% endblock %}
 
 {% block title %}

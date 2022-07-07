@@ -24,6 +24,26 @@ class CommonLayout extends HTMLElement {
   }
 }
 
-window.customElements.define('common-layout', CommonLayout);
+window.customElements.define("common-layout", CommonLayout);
 
 
+class ProductPrice extends HTMLElement {
+  constructor() {
+    super();
+
+    this.button = this.querySelector("[data-buy]")
+    this.id = this.dataset.id;
+  }
+
+  handleBuy = () => {
+    console.log(this.id);
+
+
+  }
+
+  connectedCallback() {
+    this.button.onclick = this.handleBuy;
+  }
+}
+
+window.customElements.define("product-price", ProductPrice);

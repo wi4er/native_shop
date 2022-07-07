@@ -1,6 +1,7 @@
 
 module.exports = class BannerItem {
     constructor(item) {
+        Object.assign(this, item);
 
         this.name = item.property.DEF.name;
         this.button = item.property.DEF.button;
