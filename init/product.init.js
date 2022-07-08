@@ -250,6 +250,82 @@ product.runCommand(
             _id: new ObjectId(),
             timestamp: new Date(),
             created: new Date(),
+            section: [new ObjectId("000000000000000000000003")],
+            property: {
+                DEF: {
+                    name: "Cabbage",
+                    price: 15,
+                }
+            },
+            flag: ["novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "cabbage"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/cabbage.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000003")],
+            property: {
+                DEF: {
+                    name: "Carrot",
+                    price: 15,
+                }
+            },
+            flag: [],
+            uniq: [{
+                uniq: "slug",
+                value: "carrot"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/carrot.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000003")],
+            property: {
+                DEF: {
+                    name: "Onion",
+                    price: 152,
+                }
+            },
+            flag: [],
+            uniq: [{
+                uniq: "slug",
+                value: "onion"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/onion.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000003")],
+            property: {
+                DEF: {
+                    name: "Watel Melon",
+                    price: 152,
+                }
+            },
+            flag: [],
+            uniq: [{
+                uniq: "slug",
+                value: "water_melon"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/water_melon.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
             section: [new ObjectId("000000000000000000000001")],
             property: {
                 DEF: {
@@ -343,19 +419,19 @@ product.runCommand(
             _id: new ObjectId(),
             timestamp: new Date(),
             created: new Date(),
-            section: [new ObjectId("000000000000000000000003")],
+            section: [new ObjectId("000000000000000000000002")],
             property: {
                 DEF: {
-                    name: "Cabbage"
+                    name: "Donut"
                 }
             },
             flag: ["novelty"],
             uniq: [{
                 uniq: "slug",
-                value: "cabbage"
+                value: "donut"
             }],
             image: {
-                preview: [{url: "/img/catalog/beverages.png"}]
+                preview: [{url: "/img/catalog/donut.png"}]
             }
         }, {
             _id: new ObjectId(),

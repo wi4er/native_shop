@@ -2,7 +2,7 @@ const {Router} = require("express");
 const router = Router();
 const ProductSection = require("../model/ProductSection");
 const ProductContent = require("../model/ProductContent");
-const {fetchProduct, fetchBanner} = require("../fetch");
+const {fetchProduct} = require("../fetch");
 
 router.get(
     "/:slug/",
@@ -22,7 +22,7 @@ router.get(
 
                 res.render("section", {
                     list: product.data.map(item => new ProductContent(item)),
-                    section: product.data[0],
+                    section: new ProductSection(product.data[0]),
                     slug: slug,
                 });
             })

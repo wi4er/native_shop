@@ -1,13 +1,22 @@
-
 <div class="product_card">
-    <picture class="product_card_image">
-        <img src="{{ preview }}" />
-    </picture>
+    <a
+        href="/product/{{ slug }}/"
+        title="{{ name }}"
+        class="product_card_image"
+    >
+        <picture >
+            <img
+                src="{{ preview }}"
+                alt="{{ name }}"
+                title="{{ name }}"
+            />
+        </picture>
+    </a>
 
     <div class="product_card_data">
-        <div class="product_card_name">
+        <a href="/product/{{ slug }}/" class="product_card_name">
             {{ name }}
-        </div>
+        </a>
 
         {%
             include "catalog/product_price.twig" with
