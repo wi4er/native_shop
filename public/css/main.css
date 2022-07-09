@@ -10,6 +10,15 @@
   --black-color: #4F4F4F;
 }
 
+html, body, main {
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .flex_center {
   display: flex;

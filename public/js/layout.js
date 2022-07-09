@@ -47,3 +47,9 @@ class ProductPrice extends HTMLElement {
 }
 
 window.customElements.define("product-price", ProductPrice);
+
+class PageNotFound extends HTMLElement {
+
+}
+
+window.customElements.define("page-notfound", PageNotFound);

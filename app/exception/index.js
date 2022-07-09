@@ -1,8 +1,4 @@
-function formatError(err) {
-    return {
-        message: err.message
-    };
-}
+const NotFoundError = require("./NotFoundError");
 
 module.exports = (err, req, res, next) => {
     console.log(err);
@@ -11,13 +7,18 @@ module.exports = (err, req, res, next) => {
         case Error: {
             res.status(400);
 
-            break;
+            return res.render("not_found");
+        }
+
+        case NotFoundError: {
+            res.status(404);
+            return res.render("not_found");
         }
 
         default: {
             res.status(500);
+
+            return res.render("not_found");
         }
     }
-
-    res.json(formatError(err));
 }

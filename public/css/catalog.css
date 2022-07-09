@@ -1,5 +1,4 @@
 @import "catalog/product_card.css";
-@import "catalog/product_price.css";
 
 .section_tile {
   display: grid;

@@ -1,0 +1,14 @@
+
+page-notfound {
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.not_found_label {
+  font-size: 72px;
+}
+
+.not_found_text {
+  font-size: 36px;
+}

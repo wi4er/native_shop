@@ -15,6 +15,7 @@ try {
     app.use("/", require("./pages/home"));
     app.use("/catalog", require("./pages/section"));
     app.use("/product", require("./pages/detail"));
+    app.use("/search", require("./pages/search"));
 
     app.use(require("./exception"));
 

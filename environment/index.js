@@ -13,6 +13,10 @@ class Environment {
         return process.env.PRODUCT_HOST || "localhost:8082";
     }
 
+    get SEARCH_HOST() {
+        return process.env.PRODUCT_HOST || "localhost:8084";
+    }
+
     get ACCESS_TOKEN() {
         return process.env.PRODUCT_PORT || "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRtaW4iOnRydWUsImlhdCI6MTY1Mzg3NDAxM30.PDa_NPahbV8-xPlb4djOuQLr-xpMBvs8-LXiV-bzdZU";
     }

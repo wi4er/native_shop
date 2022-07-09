@@ -3,6 +3,7 @@ const router = Router();
 const ProductSection = require("../model/ProductSection");
 const ProductContent = require("../model/ProductContent");
 const {fetchProduct} = require("../fetch");
+const NotFoundError = require("../exception/NotFoundError");
 
 router.get(
     "/:slug/",
@@ -11,18 +12,17 @@ router.get(
 
         fetchProduct(`/section/?filter[uniq][in]=${slug}`)
             .then(section => {
+                NotFoundError.assert(section.data.length);
+
                 return Promise.all([
                     fetchProduct(`/content/?filter[section][in]=${section.data[0]._id}`),
-                    Promise.resolve(section),
+                    Promise.resolve(section.data[0]),
                 ]);
             })
             .then(([product, section]) => {
-                console.log(product.data);
-
-
                 res.render("section", {
                     list: product.data.map(item => new ProductContent(item)),
-                    section: new ProductSection(product.data[0]),
+                    section: new ProductSection(section),
                     slug: slug,
                 });
             })
@@ -39,7 +39,5 @@ router.get(
         });
     }
 );
-
-
 
 module.exports = router;
