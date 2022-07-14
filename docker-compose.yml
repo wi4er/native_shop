@@ -74,17 +74,18 @@ services:
       - "8084:8080"
 
   search:
-    image: wi4er/sherlock:0.2.0
-    container_name: native_order_api
+    image: wi4er/sherlock:0.4.1
+    container_name: native_search_api
     environment:
-      TARGET_HOST: product:8080
-      ACCESS_TOKEN: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRtaW4iOnRydWUsImlhdCI6MTY1Mzg3NDAxM30.PDa_NPahbV8-xPlb4djOuQLr-xpMBvs8-LXiV-bzdZU
+      TARGET_HOST: "product:8080"
+      ACCESS_TOKEN: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRtaW4iOnRydWUsImlhdCI6MTY1Mzg3NDAxM30.PDa_NPahbV8-xPlb4djOuQLr-xpMBvs8-LXiV-bzdZU"
       SECRET: "hello world !"
     links:
       - mongo
       - cache
+      - product
     ports:
-      - "8084:8080"
+      - "8085:8080"
 
   cache:
     image: redis:alpine

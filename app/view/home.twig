@@ -1,7 +1,11 @@
 {% extends "layout/common.twig" %}
 
 {% block search %}
-    {% include "layout/search_block.twig" %}
+    {% include "layout/layout_search.twig" %}
+{% endblock %}
+
+{%  block stylesheet %}
+    <link rel="stylesheet" href="/css/layout/layout_search.css" />
 {% endblock %}
 
 {% block body %}

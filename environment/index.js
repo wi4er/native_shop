@@ -10,11 +10,11 @@ class Environment {
     }
 
     get BANNER_HOST() {
-        return process.env.PRODUCT_HOST || "localhost:8082";
+        return process.env.BANNER_HOST || "localhost:8082";
     }
 
     get SEARCH_HOST() {
-        return process.env.PRODUCT_HOST || "localhost:8084";
+        return process.env.SEARCH_HOST || "localhost:8085";
     }
 
     get ACCESS_TOKEN() {

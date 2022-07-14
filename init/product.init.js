@@ -45,6 +45,20 @@ product.runCommand(
 
 product.runCommand(
     {
+        insert: "descriptions",
+        documents: [{
+            _id: "preview",
+            timestamp: new Date(),
+            created: new Date(),
+        }, {
+            _id: "detail",
+            timestamp: new Date(),
+            created: new Date(),
+        }]
+    }
+);
+product.runCommand(
+    {
         insert: "flags",
         documents: [{
             _id: "novelty",
@@ -219,6 +233,11 @@ product.runCommand(
                     discount: 10,
                 }
             },
+            description: {
+                DEF: {
+                    preview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper viverra nam libero justo laoreet sit amet cursus sit. Congue mauris rhoncus aenean vel elit scelerisque mauris. Tristique nulla aliquet enim tortor at auctor. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. "
+                }
+            },
             flag: ["popular"],
             uniq: [{
                 uniq: "slug",
@@ -236,6 +255,11 @@ product.runCommand(
                 DEF: {
                     name: "Brocolli",
                     price: 15,
+                }
+            },
+            description: {
+                DEF: {
+                    preview: "Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Tempor orci dapibus ultrices in iaculis nunc. Nibh mauris cursus mattis molestie a iaculis at erat. A iaculis at erat pellentesque adipiscing commodo. Faucibus turpis in eu mi bibendum neque. Ut porttitor leo a diam sollicitudin tempor id eu."
                 }
             },
             flag: ["popular", "novelty"],
@@ -257,6 +281,11 @@ product.runCommand(
                     price: 15,
                 }
             },
+            description: {
+                DEF: {
+                    preview: "Placerat orci nulla pellentesque dignissim enim sit. Fermentum posuere urna nec tincidunt praesent semper feugiat. Penatibus et magnis dis parturient montes. Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Blandit cursus risus at ultrices mi tempus imperdiet. Senectus et netus et malesuada fames ac turpis egestas. Fringilla urna porttitor rhoncus dolor purus non enim."
+                }
+            },
             flag: ["novelty"],
             uniq: [{
                 uniq: "slug",
@@ -274,6 +303,11 @@ product.runCommand(
                 DEF: {
                     name: "Carrot",
                     price: 15,
+                }
+            },
+            description: {
+                DEF: {
+                    preview: "Odio ut sem nulla pharetra diam. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. Faucibus a pellentesque sit amet. Fermentum leo vel orci porta non. Pretium aenean pharetra magna ac placerat vestibulum. Commodo nulla facilisi nullam vehicula ipsum. Tincidunt tortor aliquam nulla facilisi cras. Duis at tellus at urna condimentum mattis pellentesque id."
                 }
             },
             flag: [],
@@ -295,6 +329,11 @@ product.runCommand(
                     price: 152,
                 }
             },
+            description: {
+                DEF: {
+                    preview: "Tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Ultricies leo integer malesuada nunc vel risus commodo viverra. Vitae justo eget magna fermentum iaculis. Ornare arcu dui vivamus arcu felis bibendum. Id volutpat lacus laoreet non curabitur gravida arcu ac. Nunc mattis enim ut tellus elementum sagittis vitae. Est ante in nibh mauris cursus. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Est sit amet facilisis magna etiam tempor orci eu. "
+                }
+            },
             flag: [],
             uniq: [{
                 uniq: "slug",
@@ -312,6 +351,11 @@ product.runCommand(
                 DEF: {
                     name: "Watel Melon",
                     price: 152,
+                }
+            },
+            description: {
+                DEF: {
+                    preview: "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Ut eu sem integer vitae justo eget magna. Quam lacus suspendisse faucibus interdum posuere lorem."
                 }
             },
             flag: [],
@@ -333,6 +377,11 @@ product.runCommand(
                     price: 12,
                 }
             },
+            description: {
+                DEF: {
+                    preview: "Amet nulla facilisi morbi tempus. Fusce id velit ut tortor pretium viverra. Bibendum at varius vel pharetra vel turpis. Dui id ornare arcu odio ut sem nulla. Pretium aenean pharetra magna ac placerat vestibulum. Sem integer vitae justo eget magna fermentum iaculis eu. Commodo ullamcorper a lacus vestibulum sed arcu non odio."
+                }
+            },
             flag: ["popular"],
             uniq: [{
                 uniq: "slug",
@@ -350,6 +399,11 @@ product.runCommand(
                 DEF: {
                     name: "Lemonade",
                     price: 22,
+                }
+            },
+            description: {
+                DEF: {
+                    preview: "Egestas integer eget aliquet nibh praesent tristique magna sit. Tortor consequat id porta nibh venenatis cras. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra vitae congue eu consequat ac felis donec et. Sed viverra tellus in hac."
                 }
             },
             flag: [],
@@ -370,6 +424,11 @@ product.runCommand(
                     name: "Whisky"
                 }
             },
+            description: {
+                DEF: {
+                    preview: "Cursus turpis massa tincidunt dui ut ornare. Neque laoreet suspendisse interdum consectetur libero. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Non nisi est sit amet facilisis magna etiam tempor. Quis risus sed vulputate odio ut. Nibh tellus molestie nunc non blandit massa enim. Risus sed vulputate odio ut enim blandit volutpat. "
+                }
+            },
             flag: ["novelty"],
             uniq: [{
                 uniq: "slug",
@@ -388,6 +447,11 @@ product.runCommand(
                     name: "Fruit punch"
                 }
             },
+            description: {
+                DEF: {
+                    preview: "Blandit turpis cursus in hac habitasse. Quis vel eros donec ac odio tempor orci dapibus ultrices. In mollis nunc sed id semper risus in hendrerit. Purus sit amet luctus venenatis lectus. A scelerisque purus semper eget duis. A cras semper auctor neque vitae. Nisl rhoncus mattis rhoncus urna neque viverra. Pellentesque adipiscing commodo elit at imperdiet dui accumsan."
+                }
+            },
             flag: ["novelty"],
             uniq: [{
                 uniq: "slug",
@@ -404,6 +468,11 @@ product.runCommand(
             property: {
                 DEF: {
                     name: "Fanta"
+                }
+            },
+            description: {
+                DEF: {
+                    preview: "Congue mauris rhoncus aenean vel elit scelerisque mauris. Tristique nulla aliquet enim tortor at auctor. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Tempor orci dapibus ultrices in iaculis nunc."
                 }
             },
             flag: ["novelty"],
@@ -425,6 +494,11 @@ product.runCommand(
                     name: "Donut"
                 }
             },
+            description: {
+                DEF: {
+                    preview: "Senectus et netus et malesuada fames ac turpis egestas. Fringilla urna porttitor rhoncus dolor purus non enim. Odio ut sem nulla pharetra diam. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. Faucibus a pellentesque sit amet. Fermentum leo vel orci porta non. Pretium aenean pharetra magna ac placerat vestibulum."
+                }
+            },
             flag: ["novelty"],
             uniq: [{
                 uniq: "slug",
@@ -443,6 +517,11 @@ product.runCommand(
                     name: "Bun"
                 }
             },
+            description: {
+                DEF: {
+                    preview: "Ornare arcu dui vivamus arcu felis bibendum. Id volutpat lacus laoreet non curabitur gravida arcu ac. Nunc mattis enim ut tellus elementum sagittis vitae. Est ante in nibh mauris cursus. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Est sit amet facilisis magna etiam tempor orci eu. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. "
+                }
+            },
             flag: ["novelty"],
             uniq: [{
                 uniq: "slug",
@@ -450,6 +529,52 @@ product.runCommand(
             }],
             image: {
                 preview: [{url: "/img/catalog/beverages.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000002")],
+            property: {
+                DEF: {
+                    name: "Bagel"
+                }
+            },
+            description: {
+                DEF: {
+                    preview: "Sem integer vitae justo eget magna fermentum iaculis eu. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Egestas integer eget aliquet nibh praesent tristique magna sit. Tortor consequat id porta nibh venenatis cras. Sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra vitae congue eu consequat ac felis donec et. Sed viverra tellus in hac."
+                }
+            },
+            flag: ["novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "bagel"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/bagel.png"}]
+            }
+        }, {
+            _id: new ObjectId(),
+            timestamp: new Date(),
+            created: new Date(),
+            section: [new ObjectId("000000000000000000000002")],
+            property: {
+                DEF: {
+                    name: "Cookie"
+                }
+            },
+            description: {
+                DEF: {
+                    preview: "Ac tortor vitae purus faucibus ornare suspendisse sed. Nullam non nisi est sit amet facilisis magna. Viverra ipsum nunc aliquet bibendum enim. Dignissim enim sit amet venenatis urna cursus eget nunc. Elit sed vulputate mi sit. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis. Purus non enim praesent elementum facilisis. Risus in hendrerit gravida rutrum quisque non tellus. Porttitor eget dolor morbi non arcu risus. Vitae ultricies leo integer malesuada nunc vel risus. In hac habitasse platea dictumst quisque sagittis purus sit amet. Fermentum leo vel orci porta."
+                }
+            },
+            flag: ["novelty"],
+            uniq: [{
+                uniq: "slug",
+                value: "cookie"
+            }],
+            image: {
+                preview: [{url: "/img/catalog/cookie.png"}]
             }
         }]
     }

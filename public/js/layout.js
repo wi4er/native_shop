@@ -1,4 +1,3 @@
-
 class CommonLayout extends HTMLElement {
   constructor() {
     super();
@@ -14,7 +13,7 @@ class CommonLayout extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log(this.search);
+    // console.log(this.search);
 
     window.onscroll = this.onScroll;
   }
@@ -42,7 +41,7 @@ class ProductPrice extends HTMLElement {
   }
 
   connectedCallback() {
-    this.button.onclick = this.handleBuy;
+    // this.button.onclick = this.handleBuy;
   }
 }
 
@@ -53,3 +52,35 @@ class PageNotFound extends HTMLElement {
 }
 
 window.customElements.define("page-notfound", PageNotFound);
+
+
+class LayoutSearch extends HTMLElement {
+  constructor() {
+    super();
+
+    this.input = this.querySelector("input");
+  }
+
+  fetchData(needle) {
+    fetch(`http://localhost:8085/search/?q=${needle}`)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+
+
+      })
+  }
+
+
+  handleEdit = event => {
+    if (this.input.value.length > 3) {
+      this.fetchData(this.input.value);
+    }
+  }
+
+  connectedCallback() {
+    this.input.oninput = this.handleEdit;
+  }
+}
+
+window.customElements.define("layout-search", LayoutSearch);

@@ -1,4 +1,4 @@
-const {fetchProduct, fetchBanner} = require("../fetch");
+const {fetchProduct, fetchBanner, fetchSearch} = require("../fetch");
 const {Router} = require("express");
 const router = Router();
 const ProductSection = require("../model/ProductSection");
@@ -8,12 +8,24 @@ const BannerItem = require("../model/BannerItem");
 router.get(
     "/",
     (req, res, next) => {
-        Promise.all([
-        ]).then(() => {
-            res.render("home", {
+        const {query: {q}} = req;
 
-            });
-        }).catch(next);
+        Promise.all([
+            fetchSearch.get(`/search/?q=${q}`).then(data => data.data)
+        ])
+            .then(([ids]) => {
+                if (ids.length) {
+                    return fetchProduct(`/content/?filter[field][id][in]=${ids.join(";")}`);
+                } else {
+                    return {data: []};
+                }
+            })
+            .then(product => {
+                res.render("section", {
+                    list: product.data.map(item => new ProductContent(item)),
+                });
+            })
+            .catch(next);
     }
 );
 
