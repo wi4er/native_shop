@@ -3,5 +3,10 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/font/font-face.css')
+    link(rel='stylesheet', href='/stylesheets/text-styles.css')
   body
-    block content
+    main
+      block content
+    footer
+      include popup
