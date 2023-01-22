@@ -5,10 +5,10 @@ router.get(
     '/',
     function (req, res, next) {
         res.render(
-            'index',
+            'personal',
             {
-                route: 'index',
-                title: 'Express'
+                route: 'personal',
+                title: 'Express',
             }
         );
     }

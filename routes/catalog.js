@@ -7,8 +7,8 @@ router.get(
         res.render(
             'index',
             {
-                route: 'index',
-                title: 'Express'
+                route: 'catalog',
+                title: 'Express',
             }
         );
     }

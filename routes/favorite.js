@@ -5,10 +5,10 @@ router.get(
     '/',
     function (req, res, next) {
         res.render(
-            'index',
+            'favorite',
             {
-                route: 'index',
-                title: 'Express'
+                route: 'favorite',
+                title: 'Express',
             }
         );
     }

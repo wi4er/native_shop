@@ -1,0 +1,38 @@
+main-menu
+  div(class='tabs')
+    a(
+      class=['tab-item', route === 'index' ? 'active' : '']
+      href='/'
+      id='to-home'
+    )
+      img(src="/svg/Main.svg" data-common width="28px" height="24px" alt='home')
+      img(src="/svg/Main.active.svg" data-active width="28px" height="24px" alt='home')
+
+    a(
+      class=['tab-item', route === 'catalog' ? 'active' : '']
+      href='/catalog'
+    )
+      img(src="/svg/Catalog.svg" data-common width="24px" height="24px" alt='catalog')
+      img(src="/svg/Catalog.active.svg" data-active width="24px" height="24px" alt='catalog')
+
+    a(
+      class=['tab-item', route === 'favorite' ? 'active' : '']
+      href='/favorite'
+    )
+      img(src="/svg/Favorite.svg" data-common width="28px" height="24px" alt='favorite')
+      img(src="/svg/Favorite.active.svg" data-active width="28px" height="24px" alt='favorite')
+
+    div(
+      class=['tab-item']
+      id='cart'
+    )
+      img(src="/svg/Cart.svg" data-common width="24px" height="24px" alt='cart')
+      img(src="/svg/Cart.active.svg" data-active width="24px" height="24px" alt='cart')
+
+    a(
+      class=['tab-item', route === 'personal' ? 'active' : '']
+      href='/personal'
+    )
+      img(src="/svg/Profile.svg" data-common width="24px" height="24px" alt='personal')
+      img(src="/svg/Profile.active.svg" data-active width="24px" height="24px" alt='personal')
+

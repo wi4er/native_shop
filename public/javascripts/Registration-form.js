@@ -1,10 +1,10 @@
-class AuthorizationForm extends HTMLElement {
+class RegistrationForm extends HTMLElement {
 
-    constructor() {
+    constructor(props) {
         super();
 
         this.form = this.querySelector('form');
-        this.form.onsubmit = this.handleSubmit;
+        this.form.onsubmit = this.handleSubmit
     }
 
     toValues() {
@@ -17,29 +17,30 @@ class AuthorizationForm extends HTMLElement {
         return values;
     }
 
-    handleSubmit = event => {
-        event.preventDefault();
+    handleSubmit = (event) => {
         const values = this.toValues();
 
         fetch('http://localhost:3000/auth', {
+            method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                password: values.password,
                 login: values.email,
-            }
+                password: values.password,
+            },
         })
             .then(res => res.json())
-            .then(data => {
-                console.log(data)
+            .then(res => {
+                console.log(res)
             })
-            .catch(reason => {
-                console.log(reason)
-            });
+
+        event.preventDefault();
+    }
+
+    connectedCallback() {
+
     }
 
 }
 
 
-globalThis.customElements.define('authorization-form', AuthorizationForm);
-
-
+globalThis.customElements.define('registration-form', RegistrationForm);

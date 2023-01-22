@@ -1,0 +1,10 @@
+.forms__input-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.forms__input-text {
+    width: 343px;
+    height: 64px;
+}

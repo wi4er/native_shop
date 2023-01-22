@@ -1,0 +1,36 @@
+main-menu {
+    color: red;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+main-menu .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+}
+
+main-menu .tab-item {
+    padding: 11px;
+    cursor: pointer;
+}
+
+main-menu .tab-item [data-active] {
+    display: none;
+}
+
+main-menu .tab-item [data-common] {
+    display: block;
+}
+
+main-menu .tab-item:hover [data-active], main-menu .tab-item.active [data-active] {
+    display: block;
+}
+
+main-menu .tab-item:hover [data-common], main-menu .tab-item.active [data-common] {
+    display: none;
+}

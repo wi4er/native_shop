@@ -1,12 +1,20 @@
 doctype html
-html
+html(lang='en')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/font/font-face.css')
     link(rel='stylesheet', href='/stylesheets/text-styles.css')
+    link(rel='stylesheet', href='/stylesheets/forms.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel='stylesheet', href='/stylesheets/popup.css')
   body
     main
       block content
+      include layout/main-menu
     footer
       include popup
+      script(src='/javascripts/Authorization-form.js')
+      script(src='/javascripts/Registration-form.js')
+      script(src='/javascripts/MainMenu.js')
+      script(src='/javascripts/PopupHandler.js')
