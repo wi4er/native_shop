@@ -1,4 +1,4 @@
-class RegistrationForm extends HTMLElement {
+class RegistrationPopup extends HTMLElement {
 
     constructor(props) {
         super();
@@ -43,4 +43,4 @@ class RegistrationForm extends HTMLElement {
 }
 
 
-globalThis.customElements.define('registration-form', RegistrationForm);
+globalThis.customElements.define('registration-form', RegistrationPopup);

@@ -1,4 +1,4 @@
-class AuthorizationForm extends HTMLElement {
+class AuthorizationPopup extends HTMLElement {
 
     constructor() {
         super();
@@ -40,6 +40,6 @@ class AuthorizationForm extends HTMLElement {
 }
 
 
-globalThis.customElements.define('authorization-form', AuthorizationForm);
+globalThis.customElements.define('authorization-form', AuthorizationPopup);
 
 

@@ -5,7 +5,7 @@ router.get(
     '/',
     function (req, res, next) {
         res.render(
-            'favorite',
+            'pages/favorite',
             {
                 route: 'favorite',
                 title: 'Express',

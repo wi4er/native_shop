@@ -5,7 +5,7 @@ router.get(
     '/',
     function (req, res, next) {
         res.render(
-            'personal',
+            'pages/personal',
             {
                 route: 'personal',
                 title: 'Express',

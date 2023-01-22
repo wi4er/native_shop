@@ -1,3 +1,7 @@
-popup-handler {
+popup-handler [data-popup] {
     display: none;
+}
+
+popup-handler [data-popup].active {
+    display: block;
 }

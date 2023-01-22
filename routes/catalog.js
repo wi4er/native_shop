@@ -5,7 +5,7 @@ router.get(
     '/',
     function (req, res, next) {
         res.render(
-            'index',
+            'pages/catalog',
             {
                 route: 'catalog',
                 title: 'Express',
