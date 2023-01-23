@@ -5,6 +5,52 @@
 }
 
 .forms__input-text {
+    position: relative;
+    background-color: #F2F2F2;
     width: 343px;
     height: 64px;
+    padding: 29px 20px 15px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+}
+
+.forms__input-text input {
+    border: none;
+    outline: none;
+    background-color: #00000000;
+
+    flex: 1;
+
+    font-family: 'SF UI Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222222;
+}
+
+.forms__input-placeholder {
+    position: absolute;
+    left: 20px;
+    transition: 125ms;
+    top: 22px;
+
+    font-family: 'SF UI Display', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #828282;
+}
+
+input:focus + .forms__input-placeholder, input:not(:placeholder-shown) + .forms__input-placeholder {
+    top: 13px;
+    font-size: 11px;
+}
+
+.forms__input-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }

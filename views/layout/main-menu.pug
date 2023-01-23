@@ -29,10 +29,19 @@ main-menu
       img(src="/svg/Cart.svg" data-common width="24px" height="24px" alt='cart')
       img(src="/svg/Cart.active.svg" data-active width="24px" height="24px" alt='cart')
 
-    a(
-      class=['tab-item', route === 'personal' ? 'active' : '']
-      href='/personal'
-    )
-      img(src="/svg/Profile.svg" data-common width="24px" height="24px" alt='personal')
-      img(src="/svg/Profile.active.svg" data-active width="24px" height="24px" alt='personal')
+    if user
+      a(
+        class=['tab-item', route === 'personal' ? 'active' : '']
+        href='/personal'
+      )
+        img(src="/svg/Profile.svg" data-common width="24px" height="24px" alt='personal')
+        img(src="/svg/Profile.active.svg" data-active width="24px" height="24px" alt='personal')
+    else
+      div(
+        class=['tab-item']
+        id='personal'
+      )
+        img(src="/svg/Profile.svg" data-common width="24px" height="24px" alt='personal')
+        img(src="/svg/Profile.active.svg" data-active width="24px" height="24px" alt='personal')
+
 
