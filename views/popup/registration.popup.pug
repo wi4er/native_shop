@@ -1,15 +1,13 @@
+include ../components/text-field
+include ../components/button-big
+
 registration-form(data-popup='registration')
   form
     div(class='forms__input-list')
-      label(class='forms__input-text')
-        input(name='name' value='Maxim')
-      label(class='forms__input-text')
-        input(name='email' type='email' value='user@mail.com')
-      label(class='forms__input-text')
-        input(name='password' type="password" value='qwerty')
-      label(class='forms__input-text')
-        input(name='repeat' type="password" value='qwerty')
-      div Already have an account?
+      +text-field('name', 'name', '', 'Name')
+      +text-field('email', 'email', '', 'Email')
+      +text-field('password', 'password', '', 'Password')
+      +text-field('repeat', 'password', '', 'Repeat password')
 
-
-    button(type='submit') SIGN UP
+    div Already have an account?
+    +button-big('SIGN UP')

@@ -15,7 +15,7 @@ class MainMenu extends HTMLElement {
     }
 
     openPersonal = () => {
-        this.popupHandler.openPopup('authorization');
+        this.popupHandler.openPopup('registration');
     }
 
 }

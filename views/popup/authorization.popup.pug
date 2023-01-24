@@ -1,13 +1,10 @@
+include ../components/text-field
+include ../components/button-big
+
 authorization-form(data-popup='authorization')
   form
     div(class='forms__input-list')
-      label(class='forms__input-text')
-        input(name='email' type='email' value='' placeholder=' ' required)
-        span(class='forms__input-placeholder') Email
-
-      label(class='forms__input-text')
-        input(name='password' type='password' value='' placeholder=' ' required)
-        span(class='forms__input-placeholder') Password
-  div Already have an account?
-
-    button(name='submit') login
+      +text-field('email', 'email', '', 'Email')
+      +text-field('password', 'password', '', 'Password')
+    div Already have an account?
+      +button-big('login')
