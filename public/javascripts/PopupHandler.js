@@ -2,7 +2,7 @@ class PopupHandler extends HTMLElement {
 
     popups = new Map();
 
-    constructor(props) {
+    constructor() {
         super();
 
         for (const item of Array.from(this.querySelectorAll('[data-popup]'))) {
@@ -17,7 +17,7 @@ class PopupHandler extends HTMLElement {
             throw new Error('Popup not found!');
         }
 
-        popup.classList.add('active');
+        popup.classList.toggle('active');
     }
 
 }

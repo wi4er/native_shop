@@ -2,12 +2,17 @@ include ../components/text-field
 include ../components/button-big
 
 registration-form(data-popup='registration')
+  h1 Sign Up
+
   form
-    div(class='forms__input-list')
+    div(class='list')
       +text-field('name', 'name', '', 'Name')
       +text-field('email', 'email', '', 'Email')
       +text-field('password', 'password', '', 'Password')
       +text-field('repeat', 'password', '', 'Repeat password')
+      div(class='next') Already have an account?
+        img(src='/svg/Arrow-right.svg')
 
-    div Already have an account?
     +button-big('SIGN UP')
+
+  include social

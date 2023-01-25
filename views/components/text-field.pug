@@ -1,5 +1,6 @@
 
 mixin text-field(name, type, value, label)
-  label(class='forms__input-text')
-    input(name= name type= type value= value placeholder=' ' required)
-    span(class='forms__input-placeholder')= label
+  text-field
+    label
+      input(name= name type= type value= value placeholder=' ' required)
+      span= label

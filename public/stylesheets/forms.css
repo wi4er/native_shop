@@ -1,10 +1,10 @@
-.forms__input-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px
+/**********************************************************************************************************************/
+
+text-field {
+
 }
 
-.forms__input-text {
+text-field > label {
     position: relative;
     background-color: #F2F2F2;
     width: 343px;
@@ -15,7 +15,7 @@
     display: flex;
 }
 
-.forms__input-text input {
+text-field > label > input {
     border: none;
     outline: none;
     background-color: #00000000;
@@ -30,7 +30,7 @@
     color: #222222;
 }
 
-.forms__input-placeholder {
+text-field > label > span {
     position: absolute;
     left: 20px;
     transition: 125ms;
@@ -44,27 +44,23 @@
     color: #828282;
 }
 
-input:focus + .forms__input-placeholder, input:not(:placeholder-shown) + .forms__input-placeholder {
+text-field > label > input:focus + span,
+text-field > label > input:not(:placeholder-shown) + span {
     top: 13px;
     font-size: 11px;
-}
-
-.forms__input-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
 /**********************************************************************************************************************/
 
 button-big {
-
+    width: 100%;
 }
 
 button-big > button {
     border: none;
-    width: 343px;
+
     height: 40px;
+    width: 100%;
     background-color: #FF8C00;
     color: #FFFFFF;
 
@@ -76,3 +72,44 @@ button-big > button {
 }
 
 /**********************************************************************************************************************/
+
+registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+registration-form > form {
+    flex: 1;
+
+
+    padding-top: 10px;
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+registration-form > form > .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+registration-form > form .next {
+    font-family: 'SF UI Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222222;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

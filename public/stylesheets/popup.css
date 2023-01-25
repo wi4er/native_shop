@@ -1,7 +1,53 @@
-popup-handler [data-popup] {
+popup-handler [data-popup]:not(.active) {
     display: none;
 }
 
-popup-handler [data-popup].active {
+popup-handler:has([data-popup].active) {
     display: block;
+    background-color: white;
+    z-index: 10;
+}
+
+popup-handler {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    padding-bottom: 54px;
+}
+
+/**********************************************************************************************************************/
+
+social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+social h2 {
+    font-family: 'SF UI Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+social .list {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+social .item {
+    width: 92px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
 }
