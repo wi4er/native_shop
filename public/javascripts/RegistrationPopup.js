@@ -1,10 +1,12 @@
 class RegistrationPopup extends HTMLElement {
 
-    constructor(props) {
+    constructor() {
         super();
 
         this.form = this.querySelector('form');
-        this.form.onsubmit = this.handleSubmit
+        this.form.onsubmit = this.handleSubmit;
+        this.querySelector('[data-next]').onclick = this.handleNext;
+        this.poputHandler = document.querySelector('popup-handler');
     }
 
     toValues() {
@@ -17,30 +19,36 @@ class RegistrationPopup extends HTMLElement {
         return values;
     }
 
+    setError(field, error) {
+        const inputLabel = this.querySelector(`[for=${field}]`);
+        const errorDiv = this.querySelector(`[for=${field}] + [data-error]`);
+
+        errorDiv.innerHTML = error;
+        inputLabel.classList.add('error');
+    }
+
+    handleNext = () => this.poputHandler.openPopup('authorization');
+
     handleSubmit = (event) => {
         const values = this.toValues();
+        event.preventDefault();
 
-        fetch('http://localhost:3000/auth', {
+        fetch('http://localhost:3000/myself', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
                 login: values.email,
                 password: values.password,
             },
-        })
-            .then(res => res.json())
-            .then(res => {
-                console.log(res)
-            })
-
-        event.preventDefault();
-    }
-
-    connectedCallback() {
-
+        }).then(res => {
+            if (res.status !== 201) {
+                this.setError('email', 'Wrong login or password!')
+            } else {
+                location.reload();
+            }
+        });
     }
 
 }
-
 
 globalThis.customElements.define('registration-form', RegistrationPopup);

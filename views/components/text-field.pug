@@ -1,6 +1,6 @@
-
 mixin text-field(name, type, value, label)
   text-field
-    label
-      input(name= name type= type value= value placeholder=' ' required)
+    label(for= name)
+      input(name= name type= type id= name value= value placeholder=' ' required)
       span= label
+    div(data-error)

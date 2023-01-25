@@ -6,11 +6,11 @@ registration-form(data-popup='registration')
 
   form
     div(class='list')
-      +text-field('name', 'name', '', 'Name')
-      +text-field('email', 'email', '', 'Email')
-      +text-field('password', 'password', '', 'Password')
-      +text-field('repeat', 'password', '', 'Repeat password')
-      div(class='next') Already have an account?
+      +text-field('name', 'name', 'user@mail.com', 'Name')
+      +text-field('email', 'email', 'user@mail.com', 'Email')
+      +text-field('password', 'password', 'qwerty', 'Password')
+      +text-field('repeat', 'password', 'qwerty', 'Repeat password')
+      div(class='next' data-next) Already have an account?
         img(src='/svg/Arrow-right.svg')
 
     +button-big('SIGN UP')

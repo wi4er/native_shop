@@ -11,13 +11,19 @@ class PopupHandler extends HTMLElement {
     }
 
     openPopup(name) {
-        const popup = this.popups.get(name);
-
-        if (!popup) {
-            throw new Error('Popup not found!');
+        for (const [key, popup] of this.popups) {
+            if (key === name) {
+                popup.classList.toggle('active');
+            } else {
+                popup.classList.remove('active');
+            }
         }
+    }
 
-        popup.classList.toggle('active');
+    closePopup() {
+        for (const [key, popup] of this.popups) {
+            popup.classList.remove('active');
+        }
     }
 
 }

@@ -2,9 +2,14 @@ include ../components/text-field
 include ../components/button-big
 
 authorization-form(data-popup='authorization')
+  h1 Login
+
   form
-    div(class='forms__input-list')
+    div(class='list')
       +text-field('email', 'email', '', 'Email')
       +text-field('password', 'password', '', 'Password')
-    div Already have an account?
+      div(class='next' data-next) Already have an account?
+        img(src='/svg/Arrow-right.svg')
       +button-big('login')
+
+  include social
