@@ -34,3 +34,34 @@ main-menu .tab-item:hover [data-active], main-menu .tab-item.active [data-active
 main-menu .tab-item:hover [data-common], main-menu .tab-item.active [data-common] {
     display: none;
 }
+
+/**********************************************************************************************************************/
+
+header {
+    display: flex;
+    height: 44px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+
+    z-index: 20;
+}
+
+header .title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    font-family: 'SF UI Display', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+main {
+    padding-top: 44px;
+}

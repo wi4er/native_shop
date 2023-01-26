@@ -9,12 +9,16 @@ html(lang='en')
     link(rel='stylesheet', href='/stylesheets/layout.css')
     link(rel='stylesheet', href='/stylesheets/popup.css')
   body
+    include ./layout/header
+
     main
       block content
-      include layout/main-menu
+
     footer
-      include popup
-      script(src='/javascripts/AuthorizationPopup.js')
-      script(src='/javascripts/RegistrationPopup.js')
-      script(src='/javascripts/MainMenu.js')
-      script(src='/javascripts/PopupHandler.js')
+      include layout/main-menu
+
+    include popup
+    script(src='/javascripts/AuthorizationPopup.js')
+    script(src='/javascripts/RegistrationPopup.js')
+    script(src='/javascripts/MainMenu.js')
+    script(src='/javascripts/PopupHandler.js')
