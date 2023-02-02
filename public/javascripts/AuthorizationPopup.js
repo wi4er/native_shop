@@ -21,7 +21,7 @@ class AuthorizationPopup extends HTMLElement {
         event.preventDefault();
         const values = this.toValues();
 
-        fetch('http://localhost:3000/auth', {
+        fetch('http://localhost/api/auth', {
             headers: {
                 'content-type': 'application/json',
                 password: values.password,

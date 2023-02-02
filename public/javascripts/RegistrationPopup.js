@@ -33,20 +33,21 @@ class RegistrationPopup extends HTMLElement {
         const values = this.toValues();
         event.preventDefault();
 
-        fetch('http://localhost:3000/myself', {
+        fetch('http://localhost/api/myself', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
                 login: values.email,
                 password: values.password,
             },
-        }).then(res => {
-            if (res.status !== 201) {
-                this.setError('email', 'Wrong login or password!')
-            } else {
-                location.reload();
-            }
-        });
+        })
+            .then(res => res.json().then(data => {
+                if (res.status !== 201) {
+                    this.setError(data.field, data.message)
+                } else {
+                    location.reload();
+                }
+            }));
     }
 
 }

@@ -8,6 +8,10 @@ class MainMenu extends HTMLElement {
 
         this.querySelector('#cart').addEventListener('click', this.openCart);
         this.querySelector('#personal').addEventListener('click', this.openPersonal);
+
+        fetch('/api/myself').then(res => res.json()).then(res => {
+            console.log(res)
+        });
     }
 
     openCart = () => {
